@@ -1,4 +1,10 @@
-<h1> {{ welcome_msg }} </h1>
+{% extends "base.html" %}
+
+{% block body %}
+
+<h2> {{ welcome_msg }} </h2>
 
 <a href="{% url people %}">People</a>
 <a href="{% url products %}">Products</a>
+
+{% endblock %}

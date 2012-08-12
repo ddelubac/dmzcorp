@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', 'public.views.home', name='home'),
     url(r'^people/$', 'public.views.people', name='people'),
     url(r'^products/$', 'public.views.products', name='products'),
+    url(r'^products/arduino-lcd-breadboard-box$', 'public.views.lcd_box', name='lcd_box'),
     # url(r'^myproject/', include('myproject.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

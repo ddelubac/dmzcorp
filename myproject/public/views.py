@@ -8,3 +8,6 @@ def people(request):
 
 def products(request):
 	return render_to_response("public/products.html", {})
+
+def lcd_box(request):
+	return render_to_response("public/lcd-box.html", {})
