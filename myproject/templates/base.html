@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="http://dmz-corp.com/static/bootstrap.css" type="text/css"> 
+  <link rel="stylesheet" href="http://dmz-corp.com/static/twitter-bootstrap/docs/assets/css/bootstrap.css" type="text/css"> 
   <title>DMZ CORPORATION</title>
 </head>
 
+<body>
 {% block title %}
 <div class="container">
+  <div class="row"></br></div>
+  <div class="row"></br></div>
   <div class="row"></br>
     <div class="span12">
-      <h1><center> DMZ CORPORATION </center></h1>    
+      <h1><center><a href="{% url home %}"> DMZ CORPORATION </a></center></h1>    
     </div>
     <div class="span6">
       <p><center> featured in a twitter-bootstrapped environment </center></p>
@@ -17,8 +20,41 @@
   </div>
 {% endblock %}
 
-{% block body %}
-
+{% block navbar %}
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+          <li>
+            <a class="brand" href="{% url home %}">DMZ Corp</a>
+          </li>
+          <li><a href="{% url about %}"> About </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+              Products and Services
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="{% url products %}"> Products Main Page </a></li>		
+              <li><a href="{% url lcd_box %}"> Arduino LCD Project Box </a></li>
+              <li><a href="{% url baby_books %}"> Baby Books </a></li>
+              <li><a href="{% url accounting %}"> Smart Phone Automated Accounting </a></li>
+            </ul>
+          </li>
+          <li><a href="{% url people %}"> People </a></li>
+          <li><a href="{% url contact %}"> Contact </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 {% endblock %}
+
+{% block body %}
+{% endblock %}
+
 </div>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://dmz-corp.com/static/twitter-bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
 </html>
